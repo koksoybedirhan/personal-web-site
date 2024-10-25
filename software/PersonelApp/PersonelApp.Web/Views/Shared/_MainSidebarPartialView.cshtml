@@ -1,1 +1,56 @@
-﻿
+﻿<style>
+    /* Sidebar Styles */
+    #wrapper {
+        display: flex;
+        width: 100%;
+        min-height: 100vh;
+        overflow-x: hidden;
+    }
+
+    #sidebar-wrapper {
+        min-width: 250px;
+        max-width: 250px;
+        height: 100vh;
+        transition: all 0.3s ease;
+    }
+
+    #page-content-wrapper {
+        width: 100%;
+        transition: all 0.3s ease;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -250px;
+    }
+
+    /* Sidebar Link Styles */
+    .list-group-item {
+        padding: 1rem;
+        border: none;
+        transition: background-color 0.2s ease;
+    }
+
+        .list-group-item:hover {
+            background-color: #495057;
+            cursor: pointer;
+        }
+
+    .sidebar-heading {
+        font-size: 1.5rem;
+        font-weight: bold;
+        background-color: #343a40;
+        margin: 0;
+    }
+
+</style>
+
+<div class="bg-dark border-end" id="sidebar-wrapper">
+    <div class="sidebar-heading text-center text-white py-4">Logo</div>
+    <div class="list-group list-group-flush">
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Dashboard</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Profile</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Courses</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Messages</a>
+        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Settings</a>
+    </div>
+</div>
