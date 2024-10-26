@@ -2,7 +2,7 @@
 
 namespace PersonelApp.Web.Controllers
 {
-    public class İlanlarController : Controller
+    public class HakkimdaController : Controller
     {
         public IActionResult Index()
         {

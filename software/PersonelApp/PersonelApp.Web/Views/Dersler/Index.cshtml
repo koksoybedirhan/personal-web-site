@@ -3,5 +3,35 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@model List<DerslerModel>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Başlık</th>
+            <th>Content1</th>
+            <th>Content2</th>
+            <th>Img</th>
+            <th>Date</th>
+            <th>Link</th>
+            <th>Semestr</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach(var item in Model)
+        {
+            <tr>
+                <td>@item.Title</td>
+                <td>@item.Content1</td>
+                <td>@item.Content2</td>
+                <td>@item.Img</td>
+                <td>@item.Date</td>
+                <td>@item.Link</td>
+                <td>@item.Semestr</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+
 
