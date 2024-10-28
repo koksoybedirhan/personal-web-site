@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "57Mi5UZqpGeFwr4IVgcQ3fNcgMn2eOgGmToww0gcHOs=",
+  "Hash": "Zit3rWSdf6W6Z9SYN9PacldfeP5ZqKqGan9a1Pe3Wuk=",
   "Source": "PersonelApp.Web",
   "BasePath": "_content/PersonelApp.Web",
   "Mode": "Default",
@@ -83,6 +83,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\favicon.ico"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\denemeimg.jpg",
+      "SourceId": "PersonelApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
+      "BasePath": "_content/PersonelApp.Web",
+      "RelativePath": "images/denemeimg.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\denemeimg.jpg"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\js\\site.js",

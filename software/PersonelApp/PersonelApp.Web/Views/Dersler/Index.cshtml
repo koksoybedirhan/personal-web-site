@@ -5,33 +5,57 @@
 
 @model List<DerslerModel>
 
-<table class="table">
-    <thead>
-        <tr>
-            <th>Başlık</th>
-            <th>Content1</th>
-            <th>Content2</th>
-            <th>Img</th>
-            <th>Date</th>
-            <th>Link</th>
-            <th>Semestr</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach(var item in Model)
+
+    <div class="container-fluid">
+        <div class="row mb-3">
+        @for (int i = 0; i < Model.Count; i += 2)
         {
-            <tr>
-                <td>@item.Title</td>
-                <td>@item.Content1</td>
-                <td>@item.Content2</td>
-                <td>@item.Img</td>
-                <td>@item.Date</td>
-                <td>@item.Link</td>
-                <td>@item.Semestr</td>
-            </tr>
+            <div class="col-6">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">@Model[i].Title</h5>
+                        <p class="card-text">@Model[i].Content1</p>
+                        <p class="card-text">@Model[i].Date</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">@Model[i+1].Title</h5>
+                        <p class="card-text">@Model[i+1].Content1</p>
+                        <p class="card-text">@Model[i+1].Date</p>
+                    </div>
+                </div>
+            </div>
         }
-    </tbody>
-</table>
+        </div>
+        <div class="row">
+            <div class="col-6">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-6">
+                <div class="card bg-dark text-white">
+                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
+                    <div class="card-img-overlay">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text">Last updated 3 mins ago</p>
+                    </div>
+                </div>
+            </div>
+        
+        </div>
+    </div>
 
 
 
