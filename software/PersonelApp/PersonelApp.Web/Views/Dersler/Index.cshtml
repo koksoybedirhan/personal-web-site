@@ -3,6 +3,17 @@
     ViewData["Title"] = "Index";
 }
 
+<style>
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: scale(1.02); /* Kartın hafifçe büyümesini sağlar */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge efekti ekler */
+        }
+</style>
+
 @model List<DerslerModel>
 
 @for (int i = 0; i < Model.Count; i += 4)
@@ -58,5 +69,3 @@
         </div>
     </div>
 }
-
-

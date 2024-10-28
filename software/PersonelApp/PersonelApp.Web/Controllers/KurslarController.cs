@@ -18,5 +18,23 @@ namespace PersonelApp.Web.Controllers
             var kurslar = _context.Kurslar.ToList();
             return View(kurslar);
         }
+
+        public IActionResult ESP32Dersleri()
+        {
+            return View();
+        }
+        public IActionResult NextionDersleri()
+        {
+            return View();
+        }
+
+        public IActionResult DWINDersleri()
+        {
+            return View();
+        }
+        public IActionResult ArduinoProjeleri()
+        {
+            return View();
+        }
     }
 }
