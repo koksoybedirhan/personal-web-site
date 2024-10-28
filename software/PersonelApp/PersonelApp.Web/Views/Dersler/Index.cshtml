@@ -5,57 +5,58 @@
 
 @model List<DerslerModel>
 
-
+@for (int i = 0; i < Model.Count; i += 4)
+{
     <div class="container-fluid">
         <div class="row mb-3">
-        @for (int i = 0; i < Model.Count; i += 2)
-        {
             <div class="col-6">
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">@Model[i].Title</h5>
-                        <p class="card-text">@Model[i].Content1</p>
-                        <p class="card-text">@Model[i].Date</p>
+                <a asp-area=" " asp-controller="Dersler" asp-action="DatabaseManagement">
+                    <div class="card bg-dark text-white">
+                        <img class="card-img" src="images/databasemanagement.png" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">@Model[i].Title</h5>
+                            <p class="card-text">@Model[i].Content1</p>
+                            <p class="card-text">@Model[i].Date</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-6">
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">@Model[i+1].Title</h5>
-                        <p class="card-text">@Model[i+1].Content1</p>
-                        <p class="card-text">@Model[i+1].Date</p>
+                <a asp-controller="Dersler" asp-action="OperatingSystems">
+                    <div class="card bg-dark text-white">
+                        <img class="card-img" src="images/OperatingSystems.png" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">@Model[i+1].Title</h5>
+                            <p class="card-text">@Model[i+1].Content1</p>
+                            <p class="card-text">@Model[i+1].Date</p>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-        }
         </div>
         <div class="row">
             <div class="col-6">
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+                <a asp-controller="Dersler" asp-action="ComingSoon">
+                    <div class="card bg-dark text-white">
+                        <img class="card-img" src="images/ComingSoon.png" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">@Model[i+2].Title</h5>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
             <div class="col-6">
-                <div class="card bg-dark text-white">
-                    <img class="card-img" src="images/denemeimg.jpg" alt="Card image">
-                    <div class="card-img-overlay">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                        <p class="card-text">Last updated 3 mins ago</p>
+                <a asp-controller="Dersler" asp-action="ComingSoon">
+                    <div class="card bg-dark text-white">
+                        <img class="card-img" src="images/ComingSoon.png" alt="Card image">
+                        <div class="card-img-overlay">
+                            <h5 class="card-title">@Model[i+3].Title</h5>
+                        </div>
                     </div>
-                </div>
+                </a>
             </div>
-        
         </div>
     </div>
-
+}
 
 

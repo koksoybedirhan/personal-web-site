@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "Zit3rWSdf6W6Z9SYN9PacldfeP5ZqKqGan9a1Pe3Wuk=",
+  "Hash": "62Xh3C2W+fdmZKl5Vndhg95E+QWF2rN1DFykI/Zp5qc=",
   "Source": "PersonelApp.Web",
   "BasePath": "_content/PersonelApp.Web",
   "Mode": "Default",
@@ -85,12 +85,12 @@
       "OriginalItemSpec": "wwwroot\\favicon.ico"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\denemeimg.jpg",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\ComingSoon.png",
       "SourceId": "PersonelApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
       "BasePath": "_content/PersonelApp.Web",
-      "RelativePath": "images/denemeimg.jpg",
+      "RelativePath": "images/ComingSoon.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -99,7 +99,41 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\denemeimg.jpg"
+      "OriginalItemSpec": "wwwroot\\images\\ComingSoon.png"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\databasemanagement.png",
+      "SourceId": "PersonelApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
+      "BasePath": "_content/PersonelApp.Web",
+      "RelativePath": "images/databasemanagement.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\databasemanagement.png"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\OperatingSystems.png",
+      "SourceId": "PersonelApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
+      "BasePath": "_content/PersonelApp.Web",
+      "RelativePath": "images/OperatingSystems.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\OperatingSystems.png"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\js\\site.js",

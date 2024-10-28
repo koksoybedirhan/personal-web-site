@@ -18,5 +18,20 @@ namespace PersonelApp.Web.Controllers
             var dersler = _context.Dersler.ToList();
             return View(dersler);
         }
+
+        public IActionResult DatabaseManagement() 
+        {
+            return View();
+        }
+
+        public IActionResult OperatingSystems()
+        {
+            return View();
+        }
+
+        public IActionResult ComingSoon()
+        {
+            return View();
+        }
     }
 }
