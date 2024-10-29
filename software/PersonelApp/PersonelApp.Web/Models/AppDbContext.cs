@@ -11,5 +11,17 @@ namespace PersonelApp.Web.Models
 
         public DbSet<DerslerModel> Dersler { get; set; }
         public DbSet<KurslarModel> Kurslar { get; set; }
+        public DbSet<DerslerAyrintiModel> DersAyrintilar { get; set; }
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            modelBuilder.Entity<DerslerModel>()
+                .HasOne(d => d.DersAyrintilar)
+                .WithOne(d => d.Dersler)
+                .HasForeignKey<DerslerAyrintiModel>(d => d.DersId);
+
+            base.OnModelCreating(modelBuilder);
+        }
+
+
     }
 }

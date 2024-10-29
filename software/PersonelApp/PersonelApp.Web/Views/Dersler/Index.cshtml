@@ -21,12 +21,12 @@
     <div class="container-fluid">
         <div class="row mb-3">
             <div class="col-6">
-                <a asp-area=" " asp-controller="Dersler" asp-action="DatabaseManagement">
+                <a asp-controller="Dersler" asp-action="DatabaseManagement">
                     <div class="card bg-dark text-white">
                         <img class="card-img" src="images/databasemanagement.png" alt="Card image">
                         <div class="card-img-overlay">
                             <h5 class="card-title">@Model[i].Title</h5>
-                            <p class="card-text">@Model[i].Content1</p>
+                            <p class="card-text">@Model[i].Content</p>
                             <p class="card-text">@Model[i].Date</p>
                         </div>
                     </div>
@@ -38,7 +38,7 @@
                         <img class="card-img" src="images/OperatingSystems.png" alt="Card image">
                         <div class="card-img-overlay">
                             <h5 class="card-title">@Model[i+1].Title</h5>
-                            <p class="card-text">@Model[i+1].Content1</p>
+                            <p class="card-text">@Model[i+1].Content</p>
                             <p class="card-text">@Model[i+1].Date</p>
                         </div>
                     </div>
@@ -61,7 +61,7 @@
                     <div class="card bg-dark text-white">
                         <img class="card-img" src="images/ComingSoon.png" alt="Card image">
                         <div class="card-img-overlay">
-                            <h5 class="card-title">@Model[i+3].Title</h5>
+                            <h5 class="card-title">@Model[i+2].Title</h5>
                         </div>
                     </div>
                 </a>

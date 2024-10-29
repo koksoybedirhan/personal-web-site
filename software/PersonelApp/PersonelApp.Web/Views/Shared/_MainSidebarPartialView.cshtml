@@ -1,56 +1,74 @@
 ﻿<style>
     /* Sidebar Styles */
-    #wrapper {
-        display: flex;
-        width: 100%;
-        min-height: 100vh;
-        overflow-x: hidden;
-    }
-
     #sidebar-wrapper {
-        min-width: 250px;
-        max-width: 250px;
-        height: 100vh;
-        transition: all 0.3s ease;
-    }
-
-    #page-content-wrapper {
         width: 100%;
-        transition: all 0.3s ease;
-    }
-
-    #wrapper.toggled #sidebar-wrapper {
-        margin-left: -250px;
-    }
-
-    /* Sidebar Link Styles */
-    .list-group-item {
+        height: 100vh;
         padding: 1rem;
-        border: none;
+        text-align: center;
+    }
+
+    /* Fotoğraf Dairesi */
+    .profile-photo {
+        width: 100px;
+        height: 100px;
+        border-radius: 50%;
+        background-color: #ccc;
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    /* Başlıklar */
+    .sidebar-heading {
+        font-size: 1.25rem;
+        font-weight: bold;
+        margin-top: 0.5rem;
+        margin-bottom: 1rem;
+    }
+
+    .section-title {
+        font-weight: bold;
+        font-size: 1rem;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+    }
+
+    /* Blog Yazıları Listesi */
+    .blog-list {
+        background-color: #BFBFBF;
+/*        padding: 0.5rem;
+*/        border-radius: 5px;
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    .blog-list-item {
+        padding: 0.5rem;
+        font-size: 0.9rem;
+        cursor: pointer;
         transition: background-color 0.2s ease;
     }
 
-        .list-group-item:hover {
-            background-color: #495057;
-            cursor: pointer;
+        .blog-list-item:hover {
+            background-color: #b0b0b0;
         }
-
-    .sidebar-heading {
-        font-size: 1.5rem;
-        font-weight: bold;
-        background-color: #343a40;
-        margin: 0;
-    }
-
 </style>
 
-<div class="bg-dark border-end" id="sidebar-wrapper">
-    <div class="sidebar-heading text-center text-white py-4">Logo</div>
-    <div class="list-group list-group-flush">
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Dashboard</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Profile</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Courses</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Messages</a>
-        <a href="#" class="list-group-item list-group-item-action bg-dark text-white">Settings</a>
-    </div>
+<div id="sidebar-wrapper">
+    <!-- Fotoğraf ve Bilgiler -->
+    <div class="profile-photo"></div>
+    <div class="sidebar-heading">Arş. Gör. Bedirhan Köksoy</div>
+    <p>İstanbul Rumeli Üniversitesi<br>Bilgisayar Mühendisliği</p>
+
+    <!-- Blog Yazıları Başlığı -->
+    <div class="section-title mt-5">Blog Yazıları</div>
+
+    <!-- Blog Yazıları Listesi -->
+    <ul class="blog-list">
+        <li class="blog-list-item">Gömülü Sistemlere Giriş</li>
+        <li class="blog-list-item">Arduino Nedir?</li>
+        <li class="blog-list-item">Arduino Proje Fikirleri?</li>
+        <li class="blog-list-item">ESP32 Nedir?</li>
+        <li class="blog-list-item">ESP32 Proje Örnekleri?</li>
+        <li class="blog-list-item">STM32 Nedir?</li>
+    </ul>
 </div>

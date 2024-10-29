@@ -48,24 +48,8 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSWxldGlzaW1cSW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Kurslar/ArduinoProjeleri.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc2xhclxBcmR1aW5vUHJvamVsZXJpLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Kurslar/DWINDersleri.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc2xhclxEV0lORGVyc2xlcmkuY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Kurslar/ESP32Dersleri.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc2xhclxFU1AzMkRlcnNsZXJpLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Kurslar/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc2xhclxJbmRleC5jc2h0bWw=
-build_metadata.AdditionalFiles.CssScope = 
-
-[C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Kurslar/NextionDersleri.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS3Vyc2xhclxOZXh0aW9uRGVyc2xlcmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Shared/Error.cshtml]

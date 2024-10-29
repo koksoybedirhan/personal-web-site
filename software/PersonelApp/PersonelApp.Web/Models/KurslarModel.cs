@@ -9,10 +9,8 @@ namespace PersonelApp.Web.Models
         public int Id { get; set; }
         [MaxLength(50)]
         public string Title { get; set; }
-        [MaxLength(200)]
-        public string Content1 { get; set; }
-        [MaxLength(200)]
-        public string Content2 { get; set; }
+        [MaxLength(500)]
+        public string Content { get; set; }
         [MaxLength(200)]
         public string Img { get; set; }
         [MaxLength(50)]
