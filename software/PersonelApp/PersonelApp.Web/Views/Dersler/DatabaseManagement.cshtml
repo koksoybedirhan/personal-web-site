@@ -1,4 +1,120 @@
-﻿
-@{
-}
+﻿<style>
+    .container {
+        margin-top: 30px;
+    }
 
+    h2, h4, .card-text {
+        text-align: center;
+    }
+
+    .card {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+        width: 100%;
+    }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+    .card-title {
+        font-weight: bold;
+        font-size: 1.25rem;
+    }
+
+    .card-carousel {
+        display: flex;
+        overflow-x: auto;
+        gap: 1rem;
+        scroll-behavior: smooth;
+        padding: 10px 0;
+    }
+
+        .card-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+    .carousel-btn {
+        background-color: #343a40;
+        color: white;
+        border: none;
+        padding: 0.5rem 1rem;
+        margin: 5px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="row">
+    <div class="col-12">
+        <h2>Veri Tabanı Yönetim Sistemleri</h2>
+        <h4>5. Semestr</h4>
+        <p><strong>Ders Bağlantısı İçin <a href="#">Tıklayınız</a></strong></p><br />
+        <p class="text-center">
+            Ders içeriklerine erişim sağlayabileceğiniz çeşitli notlara göz atın. Her biri, ilgili derste ihtiyacınız olan bilgilere ulaşmanıza yardımcı olacak!
+        </p>
+    </div>
+</div>
+
+<div class="d-flex justify-content-between">
+    <button class="carousel-btn" onclick="scrollLeft()">⟵</button>
+    <button class="carousel-btn" onclick="scrollRight()">⟶</button>
+</div>
+
+<div class="card-carousel">
+    <!-- Kartlar -->
+    <div class="card">
+        <img src="/images/ComingSoon.png" class="card-img-top" alt="Ders Notu">
+        <div class="card-body">
+            <h5 class="card-title">Ders Notları</h5>
+            <p class="card-text">Bu derse özel olarak hazırlanmış notlar yakında eklenecek.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="/images/databasemanagement.png" class="card-img-top" alt="Ders Notu">
+        <div class="card-body">
+            <h5 class="card-title">Ders Notları</h5>
+            <p class="card-text">Veritabanı Yönetim Sistemleri notlarına göz atın ve daha fazlasını öğrenin.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="/images/OperatingSystems.png" class="card-img-top" alt="Ders Notu">
+        <div class="card-body">
+            <h5 class="card-title">Ders Notları</h5>
+            <p class="card-text">İşletim Sistemleri dersi için hazırlanan kapsamlı notları inceleyin.</p>
+        </div>
+    </div>
+
+    <!-- Yeni Kartlar -->
+    <div class="card">
+        <img src="/images/OperatingSystems.png" class="card-img-top" alt="Ders Notu">
+        <div class="card-body">
+            <h5 class="card-title">Ders Notları</h5>
+            <p class="card-text">Ağ Yönetimi ile ilgili detaylı ders notlarına buradan ulaşın.</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <img src="/images/OperatingSystems.png" class="card-img-top" alt="Ders Notu">
+        <div class="card-body">
+            <h5 class="card-title">Ders Notları</h5>
+            <p class="card-text">Programlama teknikleri dersine özel notlarınızı buradan takip edin.</p>
+        </div>
+    </div>
+</div>
+
+<script>
+    const scrollAmount = 250;
+
+    function scrollRight() {
+        document.querySelector('.card-carousel').scrollBy({ left: scrollAmount, behavior: 'smooth' });
+    }
+
+    function scrollLeft() {
+        document.querySelector('.card-carousel').scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+    }
+</script>

@@ -8,7 +8,6 @@ namespace PersonelApp.Web.Models
         {
             
         }
-
         public DbSet<DerslerModel> Dersler { get; set; }
         public DbSet<KurslarModel> Kurslar { get; set; }
         public DbSet<DerslerAyrintiModel> DersAyrintilar { get; set; }
