@@ -1,106 +1,123 @@
-﻿@*
-    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
-*@
-@{
-}
-
-<style>
-    .course-details {
-        max-width: 800px;
-        margin: 0 auto;
-        padding: 20px;
+﻿<style>
+    .container {
+        margin-top: 30px;
     }
 
-    .course-header {
+    h2, h4, .card-text {
         text-align: center;
     }
 
-    .course-description {
-        color: #555;
-        font-size: 1.1em;
+    .card {
+        background-color: #f8f9fa;
+        border: 1px solid #ddd;
+        border-radius: 8px;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+        width: 80%; /* Yanlardan küçültülmüş boyut */
+        margin: 0 auto; /* Kartları ortala */
     }
 
-    .course-info p {
-        margin: 5px 0;
-        font-size: 1em;
-    }
-
-    .course-content ul, .course-resources ul {
-        list-style: none;
-        padding: 0;
-    }
-
-        .course-content ul li, .course-resources ul li {
-            margin: 10px 0;
-            font-size: 1em;
+        .card:hover {
+            transform: scale(1.05);
         }
 
-    .course-assignments p {
-        margin: 10px 0;
-        font-size: 1em;
+    .card-title {
         font-weight: bold;
+        font-size: 1.25rem;
     }
 
-    .course-comments textarea {
-        width: 100%;
-        height: 80px;
-        margin-top: 10px;
-        padding: 10px;
+    .card-carousel {
+        display: flex;
+        justify-content: center; /* Kartları ortala */
+        overflow-x: auto;
+        gap: 1rem;
+        scroll-behavior: smooth;
+        padding: 10px 0;
     }
 
-    .course-comments button {
-        margin-top: 10px;
-        padding: 10px 15px;
-        background-color: #007bff;
+        .card-carousel::-webkit-scrollbar {
+            display: none;
+        }
+
+    .carousel-btn {
+        background-color: #343a40;
         color: white;
         border: none;
+        padding: 0.5rem 1rem;
+        margin: 5px;
         cursor: pointer;
     }
 
+    .col-2 {
+        background-color: #343a40;
+        color: #fff;
+        padding-top: 20px;
+        min-height: 100vh;
+    }
+
+    .container-fluid {
+        overflow-x: hidden;
+    }
 </style>
 
-<div class="course-details">
-    <div class="course-header">
-        <h1>Veri Tabanı Yönetim Sistemleri</h1>
-        <p class="course-description">Bu ders, veri tabanı sistemlerinin yönetimi ve optimizasyonu hakkında temel bilgiler sunar.</p>
-    </div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <partial name="_MainSidebarPartialView" />
+        </div>
+        <div class="col-10">
+            <div class="row">
+                <div class="col-12">
+                    <h2>Veri Tabanı Yönetim Sistemleri</h2> <!-- Başlık olarak Ders Notları eklendi -->
+                    <h4>5. Semestr</h4>
+                    <p style="text-align: center; font-weight: bold;">
+                        Ders Bağlantısı İçin <a href="#">Tıklayınız</a>
+                    </p>
+                    <p class="course-details">
+                        Veri Tabanı Yönetim Sistemleri dersi, büyük veri kümelerinin organize edilmesi, yönetilmesi ve güvenliğinin sağlanması için kritik öneme sahiptir. Bu ders, veritabanı modellerini anlamanıza ve etkili sorgular yazmanıza yardımcı olur. SQL kullanarak veri yönetimi, veritabanı optimizasyonu ve veri analizinde temel prensipleri öğreneceksiniz. Ayrıca, veri bütünlüğü ve güvenliği konuları da ele alınacak.
+                    </p>
+                </div>
+            </div>
 
-    <div class="course-info">
-        <p><strong>Tarih:</strong> 28.10.2024</p>
-        <p><strong>Eğitmen:</strong> Dr. Mehmet Yılmaz</p>
-        <p><strong>Seviye:</strong> Orta</p>
-    </div>
-
-    <div class="course-content">
-        <h2>Ders İçeriği</h2>
-        <ul>
-            <li>Veri Tabanı Tasarımı ve ER Diyagramları</li>
-            <li>SQL Sorguları ve Veri Manipülasyonu</li>
-            <li>Veri Normalizasyonu ve İlişkiler</li>
-            <li>Veri Tabanı Yönetim Sistemleri (DBMS)</li>
-        </ul>
-    </div>
-
-    <div class="course-resources">
-        <h2>Kaynaklar</h2>
-        <ul>
-            <li>Introduction to Database Systems - Elmasri & Navathe</li>
-            <li>Online SQL Guide - SQLZoo</li>
-            <li>Veritabanı Yönetimi için Eğitim Videoları</li>
-        </ul>
-    </div>
-
-    <div class="course-assignments">
-        <h2>Ödevler ve Projeler</h2>
-        <p>Ödev 1: SQL Veri Sorgulamaları (Son Tarih: 15.11.2024)</p>
-        <p>Proje: Veri Tabanı Tasarımı ve Uygulaması (Son Tarih: 01.12.2024)</p>
-    </div>
-
-    <div class="course-comments">
-        <h2>Yorumlar ve Sorular</h2>
-        <form>
-            <textarea placeholder="Yorum veya soru yazınız..."></textarea>
-            <button type="submit">Gönder</button>
-        </form>
+            <h2>Ders Notları</h2>
+            <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-bs-interval="10000">
+                        <img src="/images/ComingSoon.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>First slide label</h5>
+                            <p>Some representative placeholder content for the first slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2000">
+                        <img src="/images/databasemanagement.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Second slide label</h5>
+                            <p>Some representative placeholder content for the second slide.</p>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="/images/OperatingSystems.png" class="d-block w-100" alt="...">
+                        <div class="carousel-caption d-none d-md-block">
+                            <h5>Third slide label</h5>
+                            <p>Some representative placeholder content for the third slide.</p>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
     </div>
 </div>
