@@ -12,6 +12,17 @@
             transform: scale(1.02); /* Kartın hafifçe büyümesini sağlar */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge efekti ekler */
         }
+
+    .col-2 {
+        background-color: #343a40;
+        color: #fff;
+        padding-top: 20px;
+        min-height: 100vh;
+    }
+
+    .container-fluid {
+        overflow-x: hidden;
+    }
 </style>
 
 @model List<KurslarModel>
@@ -19,50 +30,57 @@
 @for (int i = 0; i < Model.Count; i += 4)
 {
     <div class="container-fluid">
-        <div class="row mb-3">
-            <div class="col-6">
-                <div class="card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="@Model[i].Link" title="ESP32 Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">@Model[i].Title</h5>
-                        <p class="card-text">@Model[i].Content</p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="@Model[i+3].Link" title="Nextion Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-                    </div>
-                    <div class="card-body">
-                        <h5 class="card-title">@Model[i+3].Title</h5>
-                        <p class="card-text">@Model[i+3].Content</p>
-                    </div>
-                </div>
-            </div>
-        </div>
         <div class="row">
-            <div class="col-6">
-                <div class="card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="@Model[i+1].Link" title="ESP32 Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <div class="col-2">
+                <partial name="_MainSidebarPartialView" />
+            </div>
+            <div class="col-10">
+                <div class="row mt-2 mb-3">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="@Model[i].Link" title="ESP32 Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">@Model[i].Title</h5>
+                                <p class="card-text">@Model[i].Content</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">@Model[i+1].Title</h5>
-                        <p class="card-text">@Model[i+1].Content</p>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="@Model[i+3].Link" title="Nextion Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">@Model[i+3].Title</h5>
+                                <p class="card-text">@Model[i+3].Content</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="col-6">
-                <div class="card">
-                    <div class="ratio ratio-16x9">
-                        <iframe src="@Model[i+2].Link" title="Nextion Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <div class="row mb-2">
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="@Model[i+1].Link" title="ESP32 Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">@Model[i+1].Title</h5>
+                                <p class="card-text">@Model[i+1].Content</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="card-body">
-                        <h5 class="card-title">@Model[i+2].Title</h5>
-                        <p class="card-text">@Model[i+2].Content</p>
+                    <div class="col-6">
+                        <div class="card">
+                            <div class="ratio ratio-16x9">
+                                <iframe src="@Model[i+2].Link" title="Nextion Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            </div>
+                            <div class="card-body">
+                                <h5 class="card-title">@Model[i+2].Title</h5>
+                                <p class="card-text">@Model[i+2].Content</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

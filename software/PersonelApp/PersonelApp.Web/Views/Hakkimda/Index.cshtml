@@ -3,5 +3,99 @@
     ViewData["Title"] = "Index";
 }
 
-<h1>Index</h1>
+@model List<YoneticiModel>
+
+<style>
+    .col-2 {
+        background-color: #343a40;
+        color: #fff;
+        padding-top: 20px;
+        min-height: 100vh;
+    }
+
+    .container-fluid {
+        overflow-x: hidden;
+    }
+
+    .about-section {
+        max-width: 800px;
+        padding: 30px;
+        background-color: #ffffff;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+        color: #333;
+        font-family: Arial, sans-serif;
+        margin-top: 2rem;
+    }
+
+        .about-section h2 {
+            text-align: center;
+            color: #444;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+
+    .about-paragraph {
+        font-size: 1.1rem;
+        color: #555;
+        line-height: 1.8;
+        margin-bottom: 1.2rem;
+        text-align: justify;
+    }
+
+    .contact-cta {
+        margin-top: 2rem;
+        text-align: center;
+    }
+
+    .contact-button {
+        text-decoration: none;
+        color: white;
+        background-color: #007bff;
+        padding: 0.5rem 1.5rem;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+        .contact-button:hover {
+            background-color: #0056b3;
+        }
+</style>
+
+
+
+@for (int i = 0; i < Model.Count; i += 4)
+{
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-2">
+                <partial name="_MainSidebarPartialView" />
+            </div>
+            <div class="col-10">
+                <div class="row mt-2 mb-3 justify-content-center my-5">
+                    <h2 style="text-align: center;">Hakkımda</h2>
+                    <p class="about-paragraph">
+                        @Model[i].Content1
+                    </p>
+                    <p class="about-paragraph">
+                        @Model[i].Content2
+                    </p>
+                    <p class="about-paragraph">
+                        @Model[i].Content3
+                    </p>
+                    <p class="about-paragraph">
+                        @Model[i].Content4
+                    </p>
+                    <p class="about-paragraph">
+                        @Model[i].Content5
+                    </p>
+                    <p class="about-paragraph">
+                        @Model[i].Content6
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+}
+
 

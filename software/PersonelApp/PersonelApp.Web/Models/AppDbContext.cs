@@ -20,7 +20,6 @@ namespace PersonelApp.Web.Models
 
             base.OnModelCreating(modelBuilder);
         }
-
-
+        public DbSet<YoneticiModel> Yonetici { get; set; }
     }
 }
