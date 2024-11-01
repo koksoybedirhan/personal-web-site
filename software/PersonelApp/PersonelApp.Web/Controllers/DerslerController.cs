@@ -8,9 +8,11 @@ namespace PersonelApp.Web.Controllers
         private AppDbContext _context;
 
         private readonly DerslerRepository _derslerRepository;
+        private readonly DerslerAyrintiRepository _derslerAyrintiRepository;
         public DerslerController(AppDbContext context)
         {
             _derslerRepository = new DerslerRepository();
+            _derslerAyrintiRepository = new DerslerAyrintiRepository();
             _context = context;
         }
         public IActionResult Index()
@@ -21,17 +23,20 @@ namespace PersonelApp.Web.Controllers
 
         public IActionResult DatabaseManagement() 
         {
-            return View();
+            var derslerAyrinti = _context.DersAyrintilar.ToList();
+            return View(derslerAyrinti);
         }
 
         public IActionResult OperatingSystems()
         {
-            return View();
+            var derslerAyrinti = _context.DersAyrintilar.ToList();
+            return View(derslerAyrinti);
         }
 
         public IActionResult ComingSoon()
         {
-            return View();
+            var derslerAyrinti = _context.DersAyrintilar.ToList();
+            return View(derslerAyrinti);
         }
     }
 }

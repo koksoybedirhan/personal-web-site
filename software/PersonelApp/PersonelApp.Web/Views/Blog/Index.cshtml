@@ -1,0 +1,103 @@
+﻿@{
+    ViewData["Title"] = "Index";
+    var currentId = ViewBag.CurrentId;
+}
+
+@model List<BlogModel>
+
+<style>
+    .col-2 {
+        background-color: #343a40;
+        color: #fff;
+        padding-top: 20px;
+        min-height: 100vh;
+    }
+
+    .container-fluid {
+        overflow-x: hidden;
+    }
+
+    .card {
+        background-color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        padding: 20px;
+        flex: 1;
+        transition: transform 0.3s;
+    }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+    .card-title {
+        font-size: 1.5rem;
+        color: #0056b3;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        line-height: 1.6;
+        text-align: justify;
+        margin-bottom: 20px;
+    }
+
+    .image-placeholder {
+        background-color: #eaeaea;
+        border-radius: 10px;
+        height: 150px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.2rem;
+        color: #888;
+        margin-bottom: 20px;
+    }
+</style>
+</style>
+
+
+@foreach (var blog in Model)
+{
+    if (blog.Id == currentId)
+    {
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-2">
+                    <partial name="_MainSidebarPartialView" />
+                </div>
+                <div class="col-10">
+                    <div class="row">
+                        <h2 style="text-align: center;">@blog.Title</h2>
+                        <div class="col-6">
+                            <div class="card">
+                                <h2 class="card-title">@blog.Title1</h2>
+                                <p class="card-text">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..."
+                                </p>
+                                <div class="image-placeholder">RESİM-1</div>
+                                <p class="card-text">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis..."
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="card">
+                                <h2 class="card-title">@blog.Title2</h2>
+                                <p class="card-text">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..."
+                                </p>
+                                <div class="image-placeholder">RESİM-1</div>
+                                <p class="card-text">
+                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis..."
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+}

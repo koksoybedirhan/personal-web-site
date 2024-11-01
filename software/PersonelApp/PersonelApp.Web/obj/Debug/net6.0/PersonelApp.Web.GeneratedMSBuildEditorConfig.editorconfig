@@ -16,6 +16,10 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = C:\Users\Lenovo\Desktop\ARSEK\personel-web-site\software\PersonelApp\PersonelApp.Web
 build_property._RazorSourceGeneratorDebug = 
 
+[C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Blog/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQmxvZ1xJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Lenovo/Desktop/ARSEK/personel-web-site/software/PersonelApp/PersonelApp.Web/Views/Dersler/ComingSoon.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRGVyc2xlclxDb21pbmdTb29uLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

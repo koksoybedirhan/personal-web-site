@@ -1,4 +1,5 @@
 ﻿using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using PersonelApp.Web.Models;
 using System.Diagnostics;
 
@@ -6,16 +7,21 @@ namespace PersonelApp.Web.Controllers
 {
     public class HomeController : Controller
     {
-        private readonly ILogger<HomeController> _logger;
+        private AppDbContext _context;
 
-        public HomeController(ILogger<HomeController> logger)
+        private readonly ILogger<HomeController> _logger;
+        private readonly BlogRepository _blogRepository;
+        public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
+            _blogRepository = new BlogRepository();
+            _context = context;
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View();
+            var blogs = _context.Bloglar.ToList();
+            return View(blogs);
         }
 
         public IActionResult Privacy()
