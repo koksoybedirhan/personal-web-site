@@ -56,12 +56,10 @@
         margin-bottom: 20px;
     }
 </style>
-</style>
 
-
-@foreach (var blog in Model)
+@foreach (var blog in ViewBag.Bloglar)
 {
-    if (blog.Id == currentId)
+    if (blog.Id == currentId) // Compare the Id of the current blog with currentId
     {
         <div class="container-fluid">
             <div class="row">
@@ -89,7 +87,7 @@
                                 <p class="card-text">
                                     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..."
                                 </p>
-                                <div class="image-placeholder">RESİM-1</div>
+                                <div class="image-placeholder">RESİM-2</div>
                                 <p class="card-text">
                                     "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis..."
                                 </p>

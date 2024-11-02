@@ -25,65 +25,73 @@
     }
 </style>
 
-@model List<DerslerModel>
-
-@for (int i = 0; i < Model.Count; i += 4)
-{
- <div class="container-fluid">
+<div class="container-fluid">
     <div class="row">
         <div class="col-2">
             <partial name="_MainSidebarPartialView" />
         </div>
         <div class="col-10">
             <div class="row mt-2 mb-3">
-                <div class="col-6">
-                    <a asp-controller="Dersler" asp-action="DatabaseManagement">
-                        <div class="card bg-dark text-white">
-                            <img class="card-img" src="images/databasemanagement.png" alt="Card image">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">@Model[i].Title</h5>
-                                <p class="card-text">@Model[i].Content</p>
-                                <p class="card-text">@Model[i].Date</p>
+                @for (int i = 0; i < ViewBag.Dersler.Count; i += 4)
+                {
+                    <div class="col-6 mb-3">
+                        <a asp-controller="Dersler" asp-action="DatabaseManagement">
+                            <div class="card bg-dark text-white">
+                                <img class="card-img" src="images/databasemanagement.png" alt="Card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">@ViewBag.Dersler[i].Title</h5>
+                                    <p class="card-text">@ViewBag.Dersler[i].Content</p>
+                                    <p class="card-text">@ViewBag.Dersler[i].Date</p>
+                                </div>
                             </div>
+                        </a>
+                    </div>
+
+                    @if (i + 1 < ViewBag.Dersler.Count)
+                    {
+                        <div class="col-6">
+                            <a asp-controller="Dersler" asp-action="OperatingSystems">
+                                <div class="card bg-dark text-white">
+                                    <img class="card-img" src="images/OperatingSystems.png" alt="Card image">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">@ViewBag.Dersler[i + 1].Title</h5>
+                                        <p class="card-text">@ViewBag.Dersler[i + 1].Content</p>
+                                        <p class="card-text">@ViewBag.Dersler[i + 1].Date</p>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="col-6">
-                    <a asp-controller="Dersler" asp-action="OperatingSystems">
-                        <div class="card bg-dark text-white">
-                            <img class="card-img" src="images/OperatingSystems.png" alt="Card image">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">@Model[i+1].Title</h5>
-                                <p class="card-text">@Model[i+1].Content</p>
-                                <p class="card-text">@Model[i+1].Date</p>
-                            </div>
+                    }
+
+                    @if (i + 2 < ViewBag.Dersler.Count)
+                    {
+                        <div class="col-6">
+                            <a asp-controller="Dersler" asp-action="ComingSoon">
+                                <div class="card bg-dark text-white">
+                                    <img class="card-img" src="images/ComingSoon.png" alt="Card image">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">@ViewBag.Dersler[i + 2].Title</h5>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-6">
-                    <a asp-controller="Dersler" asp-action="ComingSoon">
-                        <div class="card bg-dark text-white">
-                            <img class="card-img" src="images/ComingSoon.png" alt="Card image">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">@Model[i+2].Title</h5>
-                            </div>
+                    }
+
+                    @if (i + 3 < ViewBag.Dersler.Count)
+                    {
+                        <div class="col-6">
+                            <a asp-controller="Dersler" asp-action="ComingSoon">
+                                <div class="card bg-dark text-white">
+                                    <img class="card-img" src="images/ComingSoon.png" alt="Card image">
+                                    <div class="card-img-overlay">
+                                        <h5 class="card-title">@ViewBag.Dersler[i + 3].Title</h5>
+                                    </div>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="col-6">
-                    <a asp-controller="Dersler" asp-action="ComingSoon">
-                        <div class="card bg-dark text-white">
-                            <img class="card-img" src="images/ComingSoon.png" alt="Card image">
-                            <div class="card-img-overlay">
-                                <h5 class="card-title">@Model[i+2].Title</h5>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                    }
+                }
             </div>
         </div>
     </div>
 </div>
-}

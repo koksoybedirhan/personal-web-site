@@ -21,7 +21,8 @@ namespace PersonelApp.Web.Controllers
         public IActionResult Index()
         {
             var blogs = _context.Bloglar.ToList();
-            return View(blogs);
+            ViewBag.Bloglar = blogs;
+            return View();
         }
 
         public IActionResult Privacy()

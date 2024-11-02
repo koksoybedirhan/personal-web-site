@@ -9,16 +9,23 @@ namespace PersonelApp.Web.Controllers
 
         private readonly DerslerRepository _derslerRepository;
         private readonly DerslerAyrintiRepository _derslerAyrintiRepository;
+        private readonly BlogRepository _blogRepository;
         public DerslerController(AppDbContext context)
         {
             _derslerRepository = new DerslerRepository();
             _derslerAyrintiRepository = new DerslerAyrintiRepository();
+            _blogRepository = new BlogRepository();
             _context = context;
         }
         public IActionResult Index()
         {
+            var bloglar = _context.Bloglar.ToList();
             var dersler = _context.Dersler.ToList();
-            return View(dersler);
+
+            ViewBag.Bloglar = bloglar;
+            ViewBag.Dersler = dersler;
+
+            return View();
         }
 
         public IActionResult DatabaseManagement() 

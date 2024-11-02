@@ -8,15 +8,22 @@ namespace PersonelApp.Web.Controllers
         private AppDbContext _context;
 
         private readonly KurslarRepository _kurslarRepository;
+        private readonly BlogRepository _blogRepository;
         public KurslarController(AppDbContext context)
         {
             _kurslarRepository = new KurslarRepository();
+            _blogRepository = new BlogRepository();
             _context = context;
         }
         public IActionResult Index()
         {
+            var bloglar = _context.Bloglar.ToList();
             var kurslar = _context.Kurslar.ToList();
-            return View(kurslar);
+
+            ViewBag.Bloglar = bloglar;
+            ViewBag.Kurslar = kurslar;
+
+            return View();
         }
 
         public IActionResult ESP32Dersleri()

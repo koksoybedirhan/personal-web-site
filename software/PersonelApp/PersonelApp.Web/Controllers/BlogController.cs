@@ -16,7 +16,8 @@ namespace PersonelApp.Web.Controllers
         {
             var blogs = _context.Bloglar.ToList();
             ViewBag.CurrentId = id;
-            return View(blogs);
+            ViewBag.Bloglar = blogs;
+            return View();
         }
     }
 }

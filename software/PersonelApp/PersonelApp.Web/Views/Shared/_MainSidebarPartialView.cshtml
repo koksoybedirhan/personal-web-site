@@ -56,17 +56,15 @@
 
 <div id="sidebar-wrapper">
     <!-- Fotoğraf ve Bilgiler -->
-    @for (int i = 0; i < Model.Count; i += 4)
-    {
+
         <div class="profile-photo"></div>
         <div class="sidebar-heading">Arş. Gör. Bedirhan Köksoy</div>
         <p>İstanbul Rumeli Üniversitesi<br>Bilgisayar Mühendisliği</p>
         <!-- Blog Yazıları Başlığı -->
         <div class="section-title mt-5">Blog Yazıları</div>
-    }
     <!-- Blog Yazıları Listesi -->
     <ul class="blog-list">
-        @foreach (var blog in Model)
+        @foreach (var blog in ViewBag.Bloglar)
         {
             <li class="blog-list-item">
                 <a class="nav-link text-dark" asp-area="" asp-controller="Blog" asp-action="Index" asp-route-id="@blog.Id">
