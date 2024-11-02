@@ -30,20 +30,27 @@ namespace PersonelApp.Web.Controllers
 
         public IActionResult DatabaseManagement() 
         {
-            var derslerAyrinti = _context.DersAyrintilar.ToList();
-            return View(derslerAyrinti);
+            var bloglar = _context.Bloglar.ToList();
+            var dersler = _context.Dersler.ToList();
+            var dersAyrintilar = _context.DersAyrintilar.ToList();
+
+            ViewBag.Bloglar = bloglar;
+            ViewBag.Dersler = dersler;
+            ViewBag.DersAyrintilar = dersAyrintilar;
+            return View();
         }
 
-        public IActionResult OperatingSystems()
+        public IActionResult DersAyrintilar(int id)
         {
-            var derslerAyrinti = _context.DersAyrintilar.ToList();
-            return View(derslerAyrinti);
-        }
+            var bloglar = _context.Bloglar.ToList();
+            var dersler = _context.Dersler.ToList();
+            var dersAyrintilar = _context.DersAyrintilar.ToList();
 
-        public IActionResult ComingSoon()
-        {
-            var derslerAyrinti = _context.DersAyrintilar.ToList();
-            return View(derslerAyrinti);
+            ViewBag.CurrentId = id;
+            ViewBag.Bloglar = bloglar;
+            ViewBag.Dersler = dersler;
+            ViewBag.DersAyrintilar = dersAyrintilar;
+            return View();
         }
     }
 }

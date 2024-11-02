@@ -64,7 +64,7 @@
 
 
 
-@for (int i = 0; i < Model.Count; i += 4)
+@for (int i = 0; i < ViewBag.Yonetici.Count; i += 4)
 {
     <div class="container-fluid">
         <div class="row">
@@ -75,22 +75,22 @@
                 <div class="row mt-2 mb-3 justify-content-center my-5">
                     <h2 style="text-align: center;">Hakkımda</h2>
                     <p class="about-paragraph">
-                        @Model[i].Content1
+                        @ViewBag.Yonetici[i].Content1
                     </p>
                     <p class="about-paragraph">
-                        @Model[i].Content2
+                        @ViewBag.Yonetici[i].Content2
                     </p>
                     <p class="about-paragraph">
-                        @Model[i].Content3
+                        @ViewBag.Yonetici[i].Content3
                     </p>
                     <p class="about-paragraph">
-                        @Model[i].Content4
+                        @ViewBag.Yonetici[i].Content4
                     </p>
                     <p class="about-paragraph">
-                        @Model[i].Content5
+                        @ViewBag.Yonetici[i].Content5
                     </p>
                     <p class="about-paragraph">
-                        @Model[i].Content6
+                        @ViewBag.Yonetici[i].Content6
                     </p>
                 </div>
             </div>
