@@ -1,4 +1,6 @@
-﻿
+﻿@model PersonelApp.Web.Models.IletisimModel
+@using PersonelApp.Web.Models
+
 @{
     ViewData["Title"] = "Index";
 }
@@ -114,50 +116,38 @@
                 <!-- Mesaj Formu -->
                 <div class="col-md-6 form-container">
                     <h3>Mesaj Bırakın!</h3>
-                    <form>
+                    <form asp-action="Index" method="post">
                         <div class="row">
                             <div class="col">
-                                <label for="inputName">İsim</label>
-                                <input type="text" class="form-control" id="inputName" placeholder="Bedirhan" required>
-                                <div class="invalid-feedback">
-                                    Lütfen isminizi giriniz
-                                </div>
+                                <label asp-for="Name">İsim</label>
+                                <input asp-for="Name" class="form-control" placeholder="Bedirhan" required>
+                                <span asp-validation-for="Name" class="text-danger"></span>
                             </div>
                             <div class="col">
-                                <label for="inputSurname">Soyisim</label>
-                                <input type="text" class="form-control" id="inputSurname" placeholder="Köksoy" required>
-                                <div class="invalid-feedback">
-                                    Lütfen soyisminizi giriniz
-                                </div>
+                                <label asp-for="Surname">Soyisim</label>
+                                <input asp-for="Surname" class="form-control" placeholder="Köksoy" required>
+                                <span asp-validation-for="Surname" class="text-danger"></span>
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="inputEmail">Email</label>
-                            <input type="email" class="form-control" id="inputEmail" placeholder="bedirhan.koksoy@rumeli.edu.tr" required>
-                            <div class="invalid-feedback">
-                                Lütfen geçerli bir mail adresi giriniz
-                            </div>
+                            <label asp-for="Mail">Email</label>
+                            <input asp-for="Mail" class="form-control" placeholder="bedirhan.koksoy@rumeli.edu.tr" required>
+                            <span asp-validation-for="Mail" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label for="inputPhone">Telefon</label>
-                            <input type="tel" class="form-control" id="inputPhone" placeholder="5123456789" pattern="[0-9]{10}" required>
-                            <div class="invalid-feedback">
-                                Lütfen 10 haneli telefon numaranızı giriniz
-                            </div>
+                            <label asp-for="Tel">Telefon</label>
+                            <input asp-for="Tel" class="form-control" placeholder="5123456789" pattern="[0-9]{10}" required>
+                            <span asp-validation-for="Tel" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label for="inputTitle">Konu</label>
-                            <input type="text" class="form-control" id="inputTitle" placeholder="Konu ismi" required>
-                            <div class="invalid-feedback">
-                                Lütfen konuyu giriniz
-                            </div>
+                            <label asp-for="Title">Konu</label>
+                            <input asp-for="Title" class="form-control" placeholder="Konu ismi" required>
+                            <span asp-validation-for="Title" class="text-danger"></span>
                         </div>
                         <div class="form-group">
-                            <label for="validationTextarea">Mesaj</label>
-                            <textarea class="form-control" id="validationTextarea" placeholder="Mesaj açıklaması" required></textarea>
-                            <div class="invalid-feedback">
-                                Lütfen mesajınızı bırakınız.
-                            </div>
+                            <label asp-for="Content">Mesaj</label>
+                            <textarea asp-for="Content" class="form-control" placeholder="Mesaj açıklaması" required></textarea>
+                            <span asp-validation-for="Content" class="text-danger"></span>
                         </div>
                         <button type="submit" class="btn btn-primary">Gönder</button>
                     </form>
@@ -212,25 +202,30 @@
     </div>
 </div>
 
+@section Scripts {
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.3/dist/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation-unobtrusive@3.2.12/jquery.validate.unobtrusive.min.js"></script>
 
-<script>
-    // Form validation with Bootstrap classes
-    (function() {
-        'use strict';
-        window.addEventListener('load', function() {
-            // Fetch all the forms we want to apply custom Bootstrap validation styles to
-            var forms = document.getElementsByTagName('form');
-            // Loop over them and prevent submission
-            Array.prototype.forEach.call(forms, function(form) {
-                form.addEventListener('submit', function(event) {
-                    if (form.checkValidity() === false) {
-                        event.preventDefault();
-                        event.stopPropagation();
-                    }
-                    form.classList.add('was-validated');
-                }, false);
-            });
-        }, false);
-    })();
-</script>
+    <script>
+        // Form validation with Bootstrap classes
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Fetch all the forms we want to apply custom Bootstrap validation styles to
+                var forms = document.getElementsByTagName('form');
+                // Loop over them and prevent submission
+                Array.prototype.forEach.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+}
 

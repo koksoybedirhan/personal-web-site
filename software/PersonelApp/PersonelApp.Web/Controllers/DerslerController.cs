@@ -28,18 +28,6 @@ namespace PersonelApp.Web.Controllers
             return View();
         }
 
-        public IActionResult DatabaseManagement() 
-        {
-            var bloglar = _context.Bloglar.ToList();
-            var dersler = _context.Dersler.ToList();
-            var dersAyrintilar = _context.DersAyrintilar.ToList();
-
-            ViewBag.Bloglar = bloglar;
-            ViewBag.Dersler = dersler;
-            ViewBag.DersAyrintilar = dersAyrintilar;
-            return View();
-        }
-
         public IActionResult DersAyrintilar(int id)
         {
             var bloglar = _context.Bloglar.ToList();
