@@ -1,4 +1,44 @@
-﻿<header>
+﻿<style>
+    header {
+        background-color: #f8f9fa; /* Header için açık bir arka plan rengi */
+        border-bottom: 2px solid #007bff; /* Alt sınır için mavi renkli çizgi */
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+    }
+
+    .navbar-brand {
+        font-weight: bold; /* Marka adını kalın yap */
+        color: #007bff; /* Marka adının rengini mavi yap */
+        font-size: 1.5rem; /* Yazı boyutunu büyüt */
+    }
+
+        .navbar-brand:hover {
+            color: #0056b3; /* Üzerine gelindiğinde koyu mavi */
+        }
+
+    .navbar-nav .nav-link {
+        color: #495057; /* Nav linklerin rengini koyu gri yap */
+        font-size: 1rem; /* Yazı boyutunu ayarla */
+        padding: 8px 16px; /* Linklerin iç boşluğunu ayarla */
+        transition: color 0.3s ease; /* Renk değişimini yumuşat */
+    }
+
+        .navbar-nav .nav-link:hover {
+            color: #007bff; /* Üzerine gelindiğinde mavi */
+            text-decoration: underline; /* Altı çizili yap */
+        }
+
+    .navbar-toggler {
+        border-color: #007bff; /* Toggler'ın sınır rengini mavi yap */
+    }
+
+    .navbar-toggler-icon {
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23007bff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 123, 255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Toggler ikonunu mavi yap */
+    }
+
+
+</style>
+
+<header>
     <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bedirhan Köksoy</a>
