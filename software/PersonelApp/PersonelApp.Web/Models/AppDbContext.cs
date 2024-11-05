@@ -23,5 +23,6 @@ namespace PersonelApp.Web.Models
         public DbSet<YoneticiModel> Yonetici { get; set; }
         public DbSet<BlogModel> Bloglar { get; set; }
         public DbSet<IletisimModel> Iletisim { get; set; }
+        public DbSet<HomeModel> Home { get; set; }
     }
 }

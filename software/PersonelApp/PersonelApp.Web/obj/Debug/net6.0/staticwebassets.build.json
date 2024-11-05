@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "62Xh3C2W+fdmZKl5Vndhg95E+QWF2rN1DFykI/Zp5qc=",
+  "Hash": "CE4esg2dqcdsyIIl4TvuRDUaqhnRPkw7kZ2T0I91VOw=",
   "Source": "PersonelApp.Web",
   "BasePath": "_content/PersonelApp.Web",
   "Mode": "Default",
@@ -117,6 +117,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\databasemanagement.png"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\gomulusistem1.png",
+      "SourceId": "PersonelApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
+      "BasePath": "_content/PersonelApp.Web",
+      "RelativePath": "images/gomulusistem1.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\gomulusistem1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\kisisel.jpeg",
+      "SourceId": "PersonelApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
+      "BasePath": "_content/PersonelApp.Web",
+      "RelativePath": "images/kisisel.jpeg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\kisisel.jpeg"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\OperatingSystems.png",

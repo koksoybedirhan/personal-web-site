@@ -10,18 +10,21 @@ namespace PersonelApp.Web.Controllers
         private readonly DerslerRepository _derslerRepository;
         private readonly DerslerAyrintiRepository _derslerAyrintiRepository;
         private readonly BlogRepository _blogRepository;
+        private readonly YoneticiRepository _yoneticiRepository;
         public DerslerController(AppDbContext context)
         {
             _derslerRepository = new DerslerRepository();
             _derslerAyrintiRepository = new DerslerAyrintiRepository();
             _blogRepository = new BlogRepository();
+            _yoneticiRepository = new YoneticiRepository();
             _context = context;
         }
         public IActionResult Index()
         {
             var bloglar = _context.Bloglar.ToList();
             var dersler = _context.Dersler.ToList();
-
+            var yonetici = _context.Yonetici.ToList();
+            ViewBag.Yonetici = yonetici;
             ViewBag.Bloglar = bloglar;
             ViewBag.Dersler = dersler;
 
@@ -33,7 +36,8 @@ namespace PersonelApp.Web.Controllers
             var bloglar = _context.Bloglar.ToList();
             var dersler = _context.Dersler.ToList();
             var dersAyrintilar = _context.DersAyrintilar.ToList();
-
+            var yonetici = _context.Yonetici.ToList();
+            ViewBag.Yonetici = yonetici;
             ViewBag.CurrentId = id;
             ViewBag.Bloglar = bloglar;
             ViewBag.Dersler = dersler;

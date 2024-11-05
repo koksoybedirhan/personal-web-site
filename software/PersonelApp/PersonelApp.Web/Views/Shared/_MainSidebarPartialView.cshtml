@@ -1,6 +1,4 @@
-﻿@model List<BlogModel>
-
-<style>
+﻿<style>
     /* Sidebar Styles */
     #sidebar-wrapper {
         width: 100%;
@@ -44,7 +42,7 @@
 
     .blog-list-item {
         padding: 1rem;
-        font-size: 0.9rem;
+        font-size: 0.85rem;
         cursor: pointer;
         transition: background-color 0.2s ease;
     }
@@ -56,12 +54,16 @@
 
 <div id="sidebar-wrapper">
     <!-- Fotoğraf ve Bilgiler -->
-
-        <div class="profile-photo"></div>
-        <div class="sidebar-heading">Arş. Gör. Bedirhan Köksoy</div>
+    @foreach (var yonetici in ViewBag.Yonetici)
+    {
+        <div class="profile-photo">
+            <img class="card-img-top" src="/images/kisisel.jpeg" alt="Card image">
+        </div>
+        <div class="sidebar-heading">Arş. Gör. @yonetici.Title</div>
         <p>İstanbul Rumeli Üniversitesi<br>Bilgisayar Mühendisliği</p>
         <!-- Blog Yazıları Başlığı -->
         <div class="section-title mt-5">Blog Yazıları</div>
+    }
     <!-- Blog Yazıları Listesi -->
     <ul class="blog-list">
         @foreach (var blog in ViewBag.Bloglar)

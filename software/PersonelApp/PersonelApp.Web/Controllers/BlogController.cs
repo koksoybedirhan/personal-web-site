@@ -7,14 +7,18 @@ namespace PersonelApp.Web.Controllers
     {
         private AppDbContext _context;
         private readonly BlogRepository _blogRepository;
+        private readonly YoneticiRepository _yoneticiRepository;
         public BlogController(AppDbContext context)
         {
             _blogRepository = new BlogRepository();
+            _yoneticiRepository = new YoneticiRepository();
             _context = context;
         }
         public IActionResult Index(string id)
         {
             var blogs = _context.Bloglar.ToList();
+            var yonetici = _context.Yonetici.ToList();
+            ViewBag.Yonetici = yonetici;
             ViewBag.CurrentId = id;
             ViewBag.Bloglar = blogs;
             return View();

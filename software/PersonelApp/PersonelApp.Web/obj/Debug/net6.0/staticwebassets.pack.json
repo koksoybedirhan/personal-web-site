@@ -25,6 +25,14 @@
       "PackagePath": "staticwebassets\\images\\databasemanagement.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\gomulusistem1.png",
+      "PackagePath": "staticwebassets\\images\\gomulusistem1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\kisisel.jpeg",
+      "PackagePath": "staticwebassets\\images\\kisisel.jpeg"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\js\\site.js",
       "PackagePath": "staticwebassets\\js\\site.js"
     },

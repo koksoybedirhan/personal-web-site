@@ -10,10 +10,14 @@ namespace PersonelApp.Web.Controllers
         private AppDbContext _context;
 
         private readonly ILogger<HomeController> _logger;
+        private readonly HomeRepository _homeRepository;
         private readonly BlogRepository _blogRepository;
+        private readonly YoneticiRepository _yoneticiRepository;
         public HomeController(ILogger<HomeController> logger, AppDbContext context)
         {
             _blogRepository = new BlogRepository();
+            _homeRepository = new HomeRepository();
+            _yoneticiRepository = new YoneticiRepository();
             _context = context;
             _logger = logger;
         }
@@ -21,7 +25,11 @@ namespace PersonelApp.Web.Controllers
         public IActionResult Index()
         {
             var blogs = _context.Bloglar.ToList();
+            var home = _context.Home.ToList();
+            var yonetici = _context.Yonetici.ToList();
+            ViewBag.Yonetici = yonetici;
             ViewBag.Bloglar = blogs;
+            ViewBag.Home = home;
             return View();
         }
 
