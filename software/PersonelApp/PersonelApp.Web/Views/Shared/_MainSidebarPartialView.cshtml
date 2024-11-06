@@ -41,8 +41,8 @@
     }
 
     .blog-list-item {
-        padding: 1rem;
-        font-size: 0.85rem;
+        padding: 0.75rem;
+        font-size: 0.8rem;
         cursor: pointer;
         transition: background-color 0.2s ease;
     }
@@ -59,13 +59,13 @@
         <div class="profile-photo">
             <img class="card-img-top" src="/images/kisisel.jpeg" alt="Card image">
         </div>
-        <div class="sidebar-heading">Arş. Gör. @yonetici.Title</div>
-        <p>İstanbul Rumeli Üniversitesi<br>Bilgisayar Mühendisliği</p>
+        <div class="sidebar-heading">@yonetici.Title @yonetici.Name</div>
+        <p>@yonetici.Company<br>@yonetici.Departmant</p>
         <!-- Blog Yazıları Başlığı -->
         <div class="section-title mt-5">Blog Yazıları</div>
     }
     <!-- Blog Yazıları Listesi -->
-    <ul class="blog-list">
+    <ul class="blog-list mb-3">
         @foreach (var blog in ViewBag.Bloglar)
         {
             <li class="blog-list-item">

@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "CE4esg2dqcdsyIIl4TvuRDUaqhnRPkw7kZ2T0I91VOw=",
+  "Hash": "cSF9dpx/8+i7NRfy/oHLy4lLfvpCgQIY/lQpUvARHZg=",
   "Source": "PersonelApp.Web",
   "BasePath": "_content/PersonelApp.Web",
   "Mode": "Default",
@@ -119,12 +119,12 @@
       "OriginalItemSpec": "wwwroot\\images\\databasemanagement.png"
     },
     {
-      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\gomulusistem1.png",
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\GomuluSistem1.png",
       "SourceId": "PersonelApp.Web",
       "SourceType": "Discovered",
       "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
       "BasePath": "_content/PersonelApp.Web",
-      "RelativePath": "images/gomulusistem1.png",
+      "RelativePath": "images/GomuluSistem1.png",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -133,7 +133,24 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot\\images\\gomulusistem1.png"
+      "OriginalItemSpec": "wwwroot\\images\\GomuluSistem1.png"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\GomuluSistem2.png",
+      "SourceId": "PersonelApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
+      "BasePath": "_content/PersonelApp.Web",
+      "RelativePath": "images/GomuluSistem2.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\GomuluSistem2.png"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\kisisel.jpeg",

@@ -43,42 +43,41 @@
         font-size: 1rem;
         line-height: 1.6;
         text-align: justify;
-        margin-bottom: 20px;
+        margin-bottom: 10px; /* Gereksiz boşluğu azaltmak için */
     }
 
+    /* Resim alanı */
     .image-placeholder {
         background-color: #eaeaea;
         border-radius: 10px;
-        height: 150px;
+        height: 300px;
+        width: 100%;
+        overflow: hidden;
         display: flex;
         align-items: center;
         justify-content: center;
-        font-size: 1.2rem;
-        color: #888;
-        margin-bottom: 20px;
+        /* margin: 10px 0; */ /* Bu satırı kaldırarak gereksiz boşluğu azaltın */
     }
 
-    /* Yeni eklenen stil */
-    .card-img-top {
-        width: 100%;
-        height: 200px; /* Resmin yüksekliğini sabitliyoruz */
-        object-fit: cover; /* Resmi alan içine sığacak şekilde kırpıyoruz */
-        border-radius: 10px;
-    }
+        .image-placeholder img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+        }
 </style>
 
-
-@foreach (var blog in ViewBag.Bloglar)
-{
-    if (blog.Id == currentId) // Compare the Id of the current blog with currentId
-    {
-        <div class="container-fluid">
-            <div class="row">
-                <div class="col-2">
-                    <partial name="_MainSidebarPartialView" />
-                </div>
-                <div class="col-10">
-                    <div class="row">
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-2">
+            <partial name="_MainSidebarPartialView" />
+        </div>
+        <div class="col-10">
+            @foreach (var blog in ViewBag.Bloglar)
+            {
+                if (blog.Id == currentId) // Compare the Id of the current blog with currentId
+                {
+                    <div class="row mb-2">
                         <h2 style="text-align: center;">@blog.Title</h2>
                         <div class="col-6">
                             <div class="card">
@@ -86,7 +85,7 @@
                                 <p class="card-text">
                                     @blog.Content1
                                 </p>
-                                <div class="image-placeholder mb-2 mt-2">
+                                <div class="image-placeholder">
                                     <img class="card-img-top" alt="Card image" src="@blog.Img1">
                                 </div>
                                 <p class="card-text">
@@ -98,17 +97,20 @@
                             <div class="card">
                                 <h2 class="card-title">@blog.Title2</h2>
                                 <p class="card-text">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo..."
+                                    @blog.Content3
                                 </p>
-                                <div class="image-placeholder">RESİM-2</div>
+                                <div class="image-placeholder">
+                                    <img class="card-img-top" alt="Card image" src="@blog.Img2">
+                                </div>
                                 <p class="card-text">
-                                    "Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis..."
+                                    @blog.Content4
                                 </p>
                             </div>
                         </div>
                     </div>
-                </div>
-            </div>
+                }
+            }
         </div>
-    }
-}
+    </div>
+</div>
+
