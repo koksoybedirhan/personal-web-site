@@ -13,8 +13,24 @@
       "PackagePath": "staticwebassets\\favicon.ico"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Ai1.png",
+      "PackagePath": "staticwebassets\\images\\Ai1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Ai2.png",
+      "PackagePath": "staticwebassets\\images\\Ai2.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\ComingSoon.png",
       "PackagePath": "staticwebassets\\images\\ComingSoon.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Ekran1.png",
+      "PackagePath": "staticwebassets\\images\\Ekran1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Ekran2.png",
+      "PackagePath": "staticwebassets\\images\\Ekran2.png"
     },
     {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\GomuluSistem1.png",
@@ -25,8 +41,24 @@
       "PackagePath": "staticwebassets\\images\\GomuluSistem2.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Iot1.png",
+      "PackagePath": "staticwebassets\\images\\Iot1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Iot2.png",
+      "PackagePath": "staticwebassets\\images\\Iot2.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\OperatingSystems.png",
       "PackagePath": "staticwebassets\\images\\OperatingSystems.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Rtos1.png",
+      "PackagePath": "staticwebassets\\images\\Rtos1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Rtos2.png",
+      "PackagePath": "staticwebassets\\images\\Rtos2.png"
     },
     {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\databasemanagement.png",

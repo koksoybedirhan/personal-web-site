@@ -6,4 +6,4 @@ Ders Ayrıntılar -> Resim, yazı düzenlenecek. Link eklenecek
 
 İletişim -> Mail'e gönderme eklenecek
 
-Bloglar -> Yazı ve resim eklenecek
+Bloglar -> Yazı ve resim eklenecek +

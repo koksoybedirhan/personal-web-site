@@ -1,14 +1,16 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using PersonelApp.Web.Models;
 using System.Net.Mail;
+using System.Threading.Tasks;
 
 namespace PersonelApp.Web.Controllers
 {
     public class IletisimController : Controller
     {
-        private AppDbContext _context;
+        private readonly AppDbContext _context;
         private readonly BlogRepository _blogRepository;
         private readonly YoneticiRepository _yoneticiRepository;
+
         public IletisimController(AppDbContext context)
         {
             _blogRepository = new BlogRepository();
@@ -39,17 +41,17 @@ namespace PersonelApp.Web.Controllers
                 {
                     var mailMessage = new MailMessage
                     {
-                        From = new MailAddress("your_email@example.com"),
+                        From = new MailAddress("_@gmail.com"), // Gönderici e-posta adresi
                         Subject = model.Title,
                         Body = $"Name: {model.Name}\nSurname: {model.Surname}\nEmail: {model.Mail}\nPhone: {model.Tel}\n\nMessage:\n{model.Content}",
                         IsBodyHtml = false
                     };
-                    mailMessage.To.Add("your_email@example.com");
+                    mailMessage.To.Add("bedirhan.koksoy@rumeli.edu.tr"); // Hedef e-posta adresi
 
-                    using (var smtpClient = new SmtpClient("smtp.your-email-provider.com"))
+                    using (var smtpClient = new SmtpClient("smtp.gmail.com"))
                     {
-                        smtpClient.Credentials = new System.Net.NetworkCredential("your_email@example.com", "your_password");
-                        smtpClient.Port = 587; // veya sağlayıcınız için doğru port
+                        smtpClient.Credentials = new System.Net.NetworkCredential("_@gmail.com", "_"); // Parola yerine Gmail uygulama şifresi kullanın
+                        smtpClient.Port = 587;
                         smtpClient.EnableSsl = true;
                         await smtpClient.SendMailAsync(mailMessage);
                     }
