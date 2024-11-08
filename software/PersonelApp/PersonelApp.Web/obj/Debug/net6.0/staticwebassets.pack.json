@@ -25,6 +25,18 @@
       "PackagePath": "staticwebassets\\images\\ComingSoon.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Dersler.png",
+      "PackagePath": "staticwebassets\\images\\Dersler.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Dwin.png",
+      "PackagePath": "staticwebassets\\images\\Dwin.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\ESP32.png",
+      "PackagePath": "staticwebassets\\images\\ESP32.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Ekran1.png",
       "PackagePath": "staticwebassets\\images\\Ekran1.png"
     },
@@ -41,12 +53,24 @@
       "PackagePath": "staticwebassets\\images\\GomuluSistem2.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Hakkimda.png",
+      "PackagePath": "staticwebassets\\images\\Hakkimda.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Iletisim.png",
+      "PackagePath": "staticwebassets\\images\\Iletisim.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Iot1.png",
       "PackagePath": "staticwebassets\\images\\Iot1.png"
     },
     {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Iot2.png",
       "PackagePath": "staticwebassets\\images\\Iot2.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Nextion.png",
+      "PackagePath": "staticwebassets\\images\\Nextion.png"
     },
     {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\OperatingSystems.png",
