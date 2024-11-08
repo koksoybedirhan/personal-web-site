@@ -1,5 +1,4 @@
-﻿
-@{
+﻿@{
     ViewData["Title"] = "Index";
 }
 
@@ -14,7 +13,7 @@
             transform: scale(1.02); /* Kartın hafifçe büyümesini sağlar */
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge efekti ekler */
         }
-        /* Kenar çubuğu */
+    /* Kenar çubuğu */
     .col-2 {
         background-color: #343a40;
         color: #fff;
@@ -39,9 +38,8 @@
                     <div class="col-6 mb-3">
                         <a asp-controller="Dersler" asp-action="DersAyrintilar" asp-route-id="1">
                             <div class="card bg-dark text-white">
-                                <img class="card-img" src="images/databasemanagement.png" alt="Card image">
+                                <img class="card-img" src="@ViewBag.Dersler[i].Img" alt="Card image">
                                 <div class="card-img-overlay">
-                                    <h5 class="card-title">@ViewBag.Dersler[i].Title</h5>
                                     <p class="card-text">@ViewBag.Dersler[i].Content</p>
                                     <p class="card-text">@ViewBag.Dersler[i].Date</p>
                                 </div>
@@ -54,9 +52,8 @@
                         <div class="col-6">
                             <a asp-controller="Dersler" asp-action="DersAyrintilar" asp-route-id="2">
                                 <div class="card bg-dark text-white">
-                                    <img class="card-img" src="images/OperatingSystems.png" alt="Card image">
+                                    <img class="card-img" src="@ViewBag.Dersler[i+1].Img" alt="Card image">
                                     <div class="card-img-overlay">
-                                        <h5 class="card-title">@ViewBag.Dersler[i + 1].Title</h5>
                                         <p class="card-text">@ViewBag.Dersler[i + 1].Content</p>
                                         <p class="card-text">@ViewBag.Dersler[i + 1].Date</p>
                                     </div>
@@ -68,24 +65,28 @@
                     @if (i + 2 < ViewBag.Dersler.Count)
                     {
                         <div class="col-6">
+                            <a asp-controller="Dersler" asp-action="DersAyrintilar" asp-route-id="3">
                                 <div class="card bg-dark text-white">
-                                    <img class="card-img" src="images/ComingSoon.png" alt="Card image">
+                                    <img class="card-img" src="@ViewBag.Dersler[i+2].Img" alt="Card image">
                                     <div class="card-img-overlay">
-                                        <h5 class="card-title">@ViewBag.Dersler[i + 2].Title</h5>
+                                        <p class="card-text">@ViewBag.Dersler[i + 2].Content</p>
+                                        <p class="card-text">@ViewBag.Dersler[i + 2].Date</p>
                                     </div>
                                 </div>
+                            </a>
+
                         </div>
                     }
 
                     @if (i + 3 < ViewBag.Dersler.Count)
                     {
                         <div class="col-6">
-                                <div class="card bg-dark text-white">
-                                    <img class="card-img" src="images/ComingSoon.png" alt="Card image">
-                                    <div class="card-img-overlay">
-                                        <h5 class="card-title">@ViewBag.Dersler[i + 3].Title</h5>
-                                    </div>
+                            <div class="card bg-dark text-white">
+                                <img class="card-img" src="@ViewBag.Dersler[i+3].Img" alt="Card image">
+                                <div class="card-img-overlay">
+                                    <h5 class="card-title">@ViewBag.Dersler[i + 3].Title</h5>
                                 </div>
+                            </div>
                         </div>
                     }
                 }

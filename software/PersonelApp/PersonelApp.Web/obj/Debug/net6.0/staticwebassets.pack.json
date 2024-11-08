@@ -69,6 +69,10 @@
       "PackagePath": "staticwebassets\\images\\Iot2.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Micro.png",
+      "PackagePath": "staticwebassets\\images\\Micro.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Nextion.png",
       "PackagePath": "staticwebassets\\images\\Nextion.png"
     },
