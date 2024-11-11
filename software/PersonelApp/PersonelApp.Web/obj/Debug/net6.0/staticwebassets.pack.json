@@ -105,6 +105,18 @@
       "PackagePath": "staticwebassets\\images\\databasemanagement.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\is1.png",
+      "PackagePath": "staticwebassets\\images\\is1.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\is2.png",
+      "PackagePath": "staticwebassets\\images\\is2.png"
+    },
+    {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\is3.png",
+      "PackagePath": "staticwebassets\\images\\is3.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\kisisel.jpeg",
       "PackagePath": "staticwebassets\\images\\kisisel.jpeg"
     },
