@@ -81,12 +81,15 @@
                     @if (i + 3 < ViewBag.Dersler.Count)
                     {
                         <div class="col-6">
-                            <div class="card bg-dark text-white">
-                                <img class="card-img" src="@ViewBag.Dersler[i+3].Img" alt="Card image">
-                                <div class="card-img-overlay">
-                                    <h5 class="card-title">@ViewBag.Dersler[i + 3].Title</h5>
+                            <a asp-controller="Dersler" asp-action="DersAyrintilar" asp-route-id="4">
+                                <div class="card bg-dark text-white">
+                                    <img class="card-img" src="@ViewBag.Dersler[i+3].Img" alt="Card image">
+                                    <div class="card-img-overlay">
+                                        <p class="card-text">@ViewBag.Dersler[i + 3].Content</p>
+                                        <p class="card-text">@ViewBag.Dersler[i + 3].Date</p>
+                                    </div>
                                 </div>
-                            </div>
+                            </a>
                         </div>
                     }
                 }

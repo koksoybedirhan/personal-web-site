@@ -25,6 +25,10 @@
       "PackagePath": "staticwebassets\\images\\ComingSoon.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\DataStructures.png",
+      "PackagePath": "staticwebassets\\images\\DataStructures.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\Dersler.png",
       "PackagePath": "staticwebassets\\images\\Dersler.png"
     },
