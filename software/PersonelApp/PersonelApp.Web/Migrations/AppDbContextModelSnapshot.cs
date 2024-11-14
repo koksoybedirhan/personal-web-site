@@ -187,6 +187,31 @@ namespace PersonelApp.Web.Migrations
                     b.ToTable("Dersler");
                 });
 
+            modelBuilder.Entity("PersonelApp.Web.Models.DuyurularModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Date")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Duyurular");
+                });
+
             modelBuilder.Entity("PersonelApp.Web.Models.HomeModel", b =>
                 {
                     b.Property<int>("Id")

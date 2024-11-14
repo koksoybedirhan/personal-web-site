@@ -15,6 +15,20 @@
             color: #0056b3; /* Üzerine gelindiğinde koyu mavi */
         }
 
+    .dropdown-menu {
+        position: fixed;
+        top: 60px; /* Üstte header'ın altında başlasın */
+        left: 50%;
+        transform: translateX(-50%); /* Ortalamak için */
+        width: 200px;
+        background-color: #ffffff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        padding: 10px;
+        border-radius: 5px;
+        z-index: 1000; /* Üstte kalmasını sağlar */
+    }
+
+
     .navbar-nav .nav-link {
         color: #495057; /* Nav linklerin rengini koyu gri yap */
         font-size: 1rem; /* Yazı boyutunu ayarla */
@@ -34,7 +48,6 @@
     .navbar-toggler-icon {
         background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23007bff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 123, 255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Toggler ikonunu mavi yap */
     }
-
 
 </style>
 
@@ -62,6 +75,20 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Iletisim" asp-action="Index">İletişim</a>
+                    </li>
+                    
+                    <!-- Duyurular Dropdown Menü -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle text-dark" href="#" id="duyurularDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Duyurular
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="duyurularDropdown">
+                            <li><a class="dropdown-item" href="#">Duyuru 1</a></li>
+                            <li><a class="dropdown-item" href="#">Duyuru 2</a></li>
+                            <li><a class="dropdown-item" href="#">Duyuru 3</a></li>
+                            <li><hr class="dropdown-divider"></li>
+                            <li><a class="dropdown-item" href="#">Tüm Duyurular</a></li>
+                        </ul>
                     </li>
                 </ul>
             </div>

@@ -24,5 +24,6 @@ namespace PersonelApp.Web.Models
         public DbSet<BlogModel> Bloglar { get; set; }
         public DbSet<IletisimModel> Iletisim { get; set; }
         public DbSet<HomeModel> Home { get; set; }
+        public DbSet<DuyurularModel> Duyurular { get; set; }
     }
 }
