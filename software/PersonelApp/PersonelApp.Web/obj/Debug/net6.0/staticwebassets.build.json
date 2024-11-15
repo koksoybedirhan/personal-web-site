@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "bbP+70qQxJGF8qcco463mFveBPPZHRmqWep1Y4JzGcM=",
+  "Hash": "fdP/spljzer31Yl/KzmWGn+S/imtz3H21dXhflfDg3c=",
   "Source": "PersonelApp.Web",
   "BasePath": "_content/PersonelApp.Web",
   "Mode": "Default",
@@ -457,6 +457,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\Nextion.png"
+    },
+    {
+      "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\NextionDesign.png",
+      "SourceId": "PersonelApp.Web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\",
+      "BasePath": "_content/PersonelApp.Web",
+      "RelativePath": "images/NextionDesign.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\NextionDesign.png"
     },
     {
       "Identity": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\OperatingSystems.png",

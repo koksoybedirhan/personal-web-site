@@ -81,6 +81,10 @@
       "PackagePath": "staticwebassets\\images\\Nextion.png"
     },
     {
+      "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\NextionDesign.png",
+      "PackagePath": "staticwebassets\\images\\NextionDesign.png"
+    },
+    {
       "Id": "C:\\Users\\Lenovo\\Desktop\\ARSEK\\personel-web-site\\software\\PersonelApp\\PersonelApp.Web\\wwwroot\\images\\OperatingSystems.png",
       "PackagePath": "staticwebassets\\images\\OperatingSystems.png"
     },
