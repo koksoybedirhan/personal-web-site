@@ -1,54 +1,39 @@
 ﻿<style>
     header {
-        background-color: #f8f9fa; /* Header için açık bir arka plan rengi */
-        border-bottom: 2px solid #007bff; /* Alt sınır için mavi renkli çizgi */
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Hafif gölge efekti */
+        background-color: #f8f9fa;
+        border-bottom: 2px solid #007bff;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .navbar-brand {
-        font-weight: bold; /* Marka adını kalın yap */
-        color: #007bff; /* Marka adının rengini mavi yap */
-        font-size: 1.5rem; /* Yazı boyutunu büyüt */
+        font-weight: bold;
+        color: #007bff;
+        font-size: 1.5rem;
     }
 
         .navbar-brand:hover {
-            color: #0056b3; /* Üzerine gelindiğinde koyu mavi */
+            color: #0056b3;
         }
 
-    .dropdown-menu {
-        position: fixed;
-        top: 60px; /* Üstte header'ın altında başlasın */
-        left: 50%;
-        transform: translateX(-50%); /* Ortalamak için */
-        width: 200px;
-        background-color: #ffffff;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-        padding: 10px;
-        border-radius: 5px;
-        z-index: 1000; /* Üstte kalmasını sağlar */
-    }
-
-
     .navbar-nav .nav-link {
-        color: #495057; /* Nav linklerin rengini koyu gri yap */
-        font-size: 1rem; /* Yazı boyutunu ayarla */
-        padding: 8px 16px; /* Linklerin iç boşluğunu ayarla */
-        transition: color 0.3s ease; /* Renk değişimini yumuşat */
+        color: #495057;
+        font-size: 1rem;
+        padding: 8px 16px;
+        transition: color 0.3s ease;
     }
 
         .navbar-nav .nav-link:hover {
-            color: #007bff; /* Üzerine gelindiğinde mavi */
-            text-decoration: underline; /* Altı çizili yap */
+            color: #007bff;
+            text-decoration: underline;
         }
 
     .navbar-toggler {
-        border-color: #007bff; /* Toggler'ın sınır rengini mavi yap */
+        border-color: #007bff;
     }
 
     .navbar-toggler-icon {
-        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23007bff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 123, 255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e"); /* Toggler ikonunu mavi yap */
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23007bff' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(0, 123, 255, 0.7)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
     }
-
 </style>
 
 <header>
@@ -76,22 +61,41 @@
                     <li class="nav-item">
                         <a class="nav-link text-dark" asp-area="" asp-controller="Iletisim" asp-action="Index">İletişim</a>
                     </li>
-                    
-                    <!-- Duyurular Dropdown Menü -->
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle text-dark" href="#" id="duyurularDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Duyurular
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="duyurularDropdown">
-                            <li><a class="dropdown-item" href="#">Duyuru 1</a></li>
-                            <li><a class="dropdown-item" href="#">Duyuru 2</a></li>
-                            <li><a class="dropdown-item" href="#">Duyuru 3</a></li>
-                            <li><hr class="dropdown-divider"></li>
-                            <li><a class="dropdown-item" href="#">Tüm Duyurular</a></li>
-                        </ul>
+                    <li class="nav-item">
+                        <a class="nav-link text-dark" href="#" onclick="showAnnouncements()">Duyurular</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 </header>
+
+<div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="announcementModalLabel">Duyurular</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                @foreach (var duyurular in ViewBag.Duyurular)
+                {
+                        <li>@duyurular.Title @duyurular.Content (@duyurular.Date)</li>
+                }
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+    function showAnnouncements() {
+        var myModal = new bootstrap.Modal(document.getElementById('announcementModal'));
+        myModal.show();
+    }
+</script>
