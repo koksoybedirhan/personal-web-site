@@ -1,13 +1,12 @@
 ﻿<style>
     header {
-        background-color: #f8f9fa;
-        border-bottom: 2px solid #007bff;
+        background-color: #141e30 !important;
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     }
 
     .navbar-brand {
         font-weight: bold;
-        color: #007bff;
+        color: #fff;
         font-size: 1.5rem;
     }
 
@@ -37,7 +36,7 @@
 </style>
 
 <header>
-    <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow">
+    <nav class="navbar navbar-expand-sm navbar-toggleable-sm border-bottom box-shadow">
         <div class="container-fluid">
             <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Bedirhan Köksoy</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
@@ -47,22 +46,22 @@
             <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
                 <ul class="navbar-nav flex-grow-1">
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">AnaSayfa</a>
+                        <a class="nav-link text-light" asp-area="" asp-controller="Home" asp-action="Index">AnaSayfa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Dersler" asp-action="Index">Dersler</a>
+                        <a class="nav-link text-light" asp-area="" asp-controller="Dersler" asp-action="Index">Dersler</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Kurslar" asp-action="Index">Kurslar</a>
+                        <a class="nav-link text-light" asp-area="" asp-controller="Kurslar" asp-action="Index">Kurslar</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Hakkimda" asp-action="Index">Hakkımda</a>
+                        <a class="nav-link text-light" asp-area="" asp-controller="Hakkimda" asp-action="Index">Hakkımda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" asp-area="" asp-controller="Iletisim" asp-action="Index">İletişim</a>
+                        <a class="nav-link text-light" asp-area="" asp-controller="Iletisim" asp-action="Index">İletişim</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-dark" href="#" onclick="showAnnouncements()">Duyurular</a>
+                        <a class="nav-link text-light" href="#" onclick="showAnnouncements()">Duyurular</a>
                     </li>
                 </ul>
             </div>
@@ -72,7 +71,7 @@
 
 <div class="modal fade" id="announcementModal" tabindex="-1" aria-labelledby="announcementModalLabel" aria-hidden="true">
     <div class="modal-dialog">
-        <div class="modal-content">
+        <div class="modal-content" style="background: linear-gradient(180deg, #d1d9e6, #a9b3c1, #87939f);">
             <div class="modal-header">
                 <h5 class="modal-title" id="announcementModalLabel">Duyurular</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>

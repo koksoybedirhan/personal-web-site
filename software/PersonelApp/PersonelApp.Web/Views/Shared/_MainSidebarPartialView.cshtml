@@ -8,7 +8,7 @@
     }
 
     /* Fotoğraf Dairesi */
-    .profile-photo {
+    .profile-photo1 {
         width: 100px;
         height: 100px;
         border-radius: 50%;
@@ -50,6 +50,13 @@
         .blog-list-item:hover {
             background-color: #b0b0b0;
         }
+
+    .hr {
+        width: 1px;
+        height: 100px; /* Adjust the height as needed */
+        background-color: white; /* Change the color if necessary */
+    }
+
 </style>
 
 <div id="sidebar-wrapper">
@@ -57,7 +64,7 @@
     @foreach (var yonetici in ViewBag.Yonetici)
     {
         <div class="profile-photo">
-            <img class="card-img-top" src="/images/kisisel.jpeg" alt="Card image">
+            <img class="card-img-top profile-photo1" src="@yonetici.Image" alt="Card image">
         </div>
         <div class="sidebar-heading">@yonetici.Title @yonetici.Name</div>
         <p>@yonetici.Company<br>@yonetici.Departmant</p>
@@ -65,15 +72,17 @@
         <div class="section-title mt-5">Blog Yazıları</div>
     }
     <!-- Blog Yazıları Listesi -->
-    <ul class="blog-list mb-3">
+    <ul class="blog-list mb-3" style="background: linear-gradient(180deg, #0a141d, #1b2a38, #101a26);">
         @foreach (var blog in ViewBag.Bloglar)
         {
             <li class="blog-list-item">
-                <a class="nav-link text-dark" asp-area="" asp-controller="Blog" asp-action="Index" asp-route-id="@blog.Id">
+                <a class="nav-link text-light" asp-area="" asp-controller="Blog" asp-action="Index" asp-route-id="@blog.Id">
                     @blog.Title
                 </a>
             </li>
         }
     </ul>
+    <hr />
 </div>
+
 

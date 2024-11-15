@@ -20,5 +20,6 @@ namespace PersonelApp.Web.Models
         public string Mail { get; set; }
         public string Linkedin { get; set; }
         public string Github { get; set; }
+        public string Image { get; set; }
     }
 }

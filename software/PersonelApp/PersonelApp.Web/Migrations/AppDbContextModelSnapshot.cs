@@ -369,6 +369,10 @@ namespace PersonelApp.Web.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("Image")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Linkedin")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");

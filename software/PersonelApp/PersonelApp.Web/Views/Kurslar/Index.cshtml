@@ -16,15 +16,36 @@
         }
 
     .col-2 {
-        background-color: #343a40;
+        style ="background: linear-gradient(180deg, #141e30, #0d1b2a);
         color: #fff;
-        padding-top: 20px;
         min-height: 100vh;
     }
 
     .container-fluid {
         overflow-x: hidden;
     }
+
+    .card-body {
+        color: white; /* Change text color to black */
+    }
+
+    .card-title, .card-text {
+        color: white; /* Ensure titles and text inside cards are black */
+    }
+
+    .container-fluid {
+        overflow-x: hidden;
+    }
+
+    .card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+        .card:hover {
+            transform: scale(1.02); /* Kartın hafifçe büyümesini sağlar */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Gölge efekti ekler */
+        }
+
 </style>
 
 @model List<KurslarModel>
@@ -39,7 +60,7 @@
             <div class="col-10">
                 <div class="row mt-2 mb-3">
                     <div class="col-6">
-                        <div class="card">
+                        <div class="card" style="background: linear-gradient(180deg, #2c3e50, #34495e, #1c2b36);">
                             <div class="ratio ratio-16x9">
                                 <iframe src="@ViewBag.Kurslar[i].Link" title="ESP32 Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -50,7 +71,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card">
+                        <div class="card" style="background: linear-gradient(180deg, #2c3e50, #34495e, #1c2b36);">
                             <div class="ratio ratio-16x9">
                                 <iframe src="@ViewBag.Kurslar[i+3].Link" title="Nextion Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -63,7 +84,7 @@
                 </div>
                 <div class="row mb-2">
                     <div class="col-6">
-                        <div class="card">
+                        <div class="card" style="background: linear-gradient(180deg, #2c3e50, #34495e, #1c2b36);">
                             <div class="ratio ratio-16x9">
                                 <iframe src="@ViewBag.Kurslar[i+1].Link" title="ESP32 Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
@@ -74,7 +95,7 @@
                         </div>
                     </div>
                     <div class="col-6">
-                        <div class="card">
+                        <div class="card" style="background: linear-gradient(180deg, #2c3e50, #34495e, #1c2b36);">
                             <div class="ratio ratio-16x9">
                                 <iframe src="@ViewBag.Kurslar[i+2].Link" title="Nextion Dersleri" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                             </div>
