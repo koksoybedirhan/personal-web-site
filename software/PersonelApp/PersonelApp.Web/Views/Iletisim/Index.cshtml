@@ -9,6 +9,29 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
 <style>
+    @@media (max-width: 768px) {
+        .col-2 {
+            display: none; /* Side menu'yu gizler */
+        }
+
+        .col-10 {
+            width: 100%; /* İçeriği tam genişlikte kaplatır */
+            margin: 0 auto; /* Ortalar */
+        }
+
+        .content-container {
+            padding: 10px; /* Küçük ekranlarda daha az padding */
+        }
+
+        .contact-container {
+            margin: 0rem !important;
+        }
+
+        .form-container {
+            margin: 0rem !important;
+            margin-bottom: 1rem !important;
+        }
+    }
     .col-2 {
         style ="background: linear-gradient(180deg, #141e30, #0d1b2a); color: #fff;
         padding-top: 20px;
@@ -99,11 +122,74 @@
 
     /* Küçük ekranlarda daha iyi görünüm için responsive düzenleme */
     @@media (max-width: 768px) {
-        .form-container, .contact-container {
-            margin: 1rem;
+        .col-2 {
+            display: none; /* Side menu'yu gizler */
+        }
+
+        .col-10 {
+            width: 100%; /* İçeriği tam genişlikte kaplatır */
+            margin: 0 auto; /* Ortalar */
+        }
+
+        .content-container {
+            padding: 10px; /* Küçük ekranlarda daha az padding */
+        }
+
+        .dropdown-menu-fullscreen {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(180deg, #141e30, #0d1b2a);
+            color: white;
+            z-index: 1050;
+            padding: 20px;
+            overflow-y: auto;
+        }
+
+            .dropdown-menu-fullscreen.show {
+                display: block; /* Menü açıldığında görünür */
+            }
+
+        .dropdown-toggle-btn {
+            position: fixed;
+            top: 10px;
+            left: 10px;
+            z-index: 1100;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            text-align: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+    }
+
+    @@media (min-width: 769px) {
+        .dropdown-container {
+            display: none;
         }
     }
 </style>
+
+<div class="dropdown-container">
+    <button class="dropdown-toggle-btn" onclick="toggleFullscreenMenu()">
+        ☰
+    </button>
+
+    <!-- Fullscreen Dropdown Menu -->
+    <div id="fullscreenMenu" class="dropdown-menu-fullscreen">
+        <partial name="_MainSidebarPartialView" />
+    </div>
+</div>
 
 <div class="container-fluid">
     <div class="row">
@@ -226,5 +312,13 @@
             }, false);
         })();
     </script>
+    <script>
+        function toggleFullscreenMenu() {
+            const menu = document.getElementById('fullscreenMenu');
+            menu.classList.toggle('show');
+        }
+    </script>
+
 }
+
 

@@ -328,6 +328,31 @@ namespace PersonelApp.Web.Migrations
                     b.ToTable("Kurslar");
                 });
 
+            modelBuilder.Entity("PersonelApp.Web.Models.LinkModel", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<string>("Content")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Link")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("Linkler");
+                });
+
             modelBuilder.Entity("PersonelApp.Web.Models.YoneticiModel", b =>
                 {
                     b.Property<string>("Id")

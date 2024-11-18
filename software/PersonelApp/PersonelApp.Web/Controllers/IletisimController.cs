@@ -11,12 +11,13 @@ namespace PersonelApp.Web.Controllers
         private readonly BlogRepository _blogRepository;
         private readonly YoneticiRepository _yoneticiRepository;
         private readonly DuyurularRepository _duyurularRepository;
-
+        private readonly LinkRepository _linkRepository;
         public IletisimController(AppDbContext context)
         {
             _blogRepository = new BlogRepository();
             _yoneticiRepository = new YoneticiRepository();
             _duyurularRepository = new DuyurularRepository();
+            _linkRepository = new LinkRepository();
             _context = context;
         }
 
@@ -25,6 +26,8 @@ namespace PersonelApp.Web.Controllers
             var bloglar = _context.Bloglar.ToList();
             var yonetici = _context.Yonetici.ToList();
             var duyurular = _context.Duyurular.ToList();
+            var linkler = _context.Linkler.ToList();
+            ViewBag.Linkler = linkler;
             ViewBag.Duyurular = duyurular;
             ViewBag.Yonetici = yonetici;
             ViewBag.Bloglar = bloglar;

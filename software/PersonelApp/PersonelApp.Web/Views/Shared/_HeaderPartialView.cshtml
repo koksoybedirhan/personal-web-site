@@ -58,10 +58,13 @@
                         <a class="nav-link text-light" asp-area="" asp-controller="Hakkimda" asp-action="Index">Hakkımda</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" asp-area="" asp-controller="Iletisim" asp-action="Index">İletişim</a>
+                        <a class="nav-link text-light" href="#" onclick="showAnnouncements()">Duyurular</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-light" href="#" onclick="showAnnouncements()">Duyurular</a>
+                        <a class="nav-link text-light" href="#" onclick="showLinks()">Önemli Bağlantılar</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-light" asp-area="" asp-controller="Iletisim" asp-action="Index">İletişim</a>
                     </li>
                 </ul>
             </div>
@@ -78,10 +81,39 @@
             </div>
             <div class="modal-body">
                 <ul>
-                @foreach (var duyurular in ViewBag.Duyurular)
-                {
+                    @foreach (var duyurular in ViewBag.Duyurular)
+                    {
                         <li><strong>@duyurular.Title</strong> @duyurular.Content (@duyurular.Date)</li>
-                }
+                    }
+                </ul>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Kapat</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="linkModal" tabindex="-1" aria-labelledby="linkModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content" style="background: linear-gradient(180deg, #d1d9e6, #a9b3c1, #87939f);">
+            <div class="modal-header">
+                <h5 class="modal-title" id="announcementModalLabel">Önemli Bağlantılar</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <ul>
+                    @foreach (var linkler in ViewBag.Linkler)
+                    {
+                        <li>
+                            <strong>
+                                @linkler.Title
+                                <a href="@linkler.Link" target="_blank" rel="noopener nofollow noreferrer">
+                                    @linkler.Content
+                                </a>
+                            </strong>
+                        </li>
+                    }
                 </ul>
             </div>
             <div class="modal-footer">
@@ -95,6 +127,10 @@
 <script>
     function showAnnouncements() {
         var myModal = new bootstrap.Modal(document.getElementById('announcementModal'));
+        myModal.show();
+    }
+    function showLinks() {
+        var myModal = new bootstrap.Modal(document.getElementById('linkModal'));
         myModal.show();
     }
 </script>
